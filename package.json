@@ -1,0 +1,21 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Testing node.js initial attempt",
+  "main": "index.js",
+  "debug.javascript.codelens.npmScripts": "never",
+  "scripts": {
+    "start": "node server_demo",
+    "dev": "nodemon server_demo"
+  },
+  "author": "Jerry Marlatt",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "nodemon": "^2.0.15"
+  }
+}
