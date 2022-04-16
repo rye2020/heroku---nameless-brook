@@ -17,6 +17,7 @@ var mime = {
 
 var dir = path.join(__dirname, 'public');
 var reqpath = req.url.toString().split('?')[0];
+console.log(`reqpath= ${reqpath}`);
 var file = path.join(dir, reqpath.replace(/\/$/, '/index.html'));
 var type = mime[path.extname(file).slice(1)] || 'text/html';   // Should this default to 'text/plain'?
 
@@ -44,8 +45,7 @@ var type = mime[path.extname(file).slice(1)] || 'text/html';   // Should this de
 
 //        Handle jpg file
       if ( !done ) {
-        if (/.(jpg)$/.test(req.url)) {                  // test if req.url has jpg extension
-            console.log(reqpath);
+        if (/.(jpg)$/.test(reqpath)) {                  // test if req.url has jpg extension
             var s = fs.createReadStream(reqpath);
             s.on('open', function() {
                 res.setHeader('Content-Type', 'text/html');
@@ -85,9 +85,9 @@ var type = mime[path.extname(file).slice(1)] || 'text/html';   // Should this de
     done = 1;
     }
 
-    function newFunction() {
+ /*   function newFunction() {
         console.log(path.join(__dirname, 'public', 'images', 'jrm.jpg'));
-    }
+    }*/
 })
 
 const PORT = process.env.PORT || 5000;
