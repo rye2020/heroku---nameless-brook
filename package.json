@@ -2,16 +2,18 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "Testing node.js initial attempt",
-  "main": "index.js",
+  "main": "server_demo.js",
   "debug.javascript.codelens.npmScripts": "never",
   "scripts": {
-    "start": "node server_demo",
-    "dev": "nodemon server_demo"
+    "start": "node server_demo.js",
+    "dev": "nodemon server_demo.js"
   },
   "author": "Jerry Marlatt",
   "license": "ISC",
   "dependencies": {
+    "cloudinary": "^1.29.0",
     "express": "^4.17.3",
+    "image-downloader": "^4.2.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
